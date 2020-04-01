@@ -12,4 +12,4 @@ This prototype was developed as a 12hour hackathon build in Solve4Bharat hackath
 
 - Training the model for 10 epochs \(approximately 11s per epoch) gave me a training accuracy of 99.5% and validation accuracy of 99.2%
 
-- To integrate the Tensorflow model in the Android app, i am copying the Tensorflow model to a TFLite model in the notebook and then copying the .tflite model file to the assets directory for the Android app.
+- To integrate the Tensorflow model in the Android app, I am coverting the Tensorflow model to a TFLite model in the notebook and then copying the .tflite file to the assets directory for the Android app.
