@@ -6,10 +6,6 @@ This prototype was developed as a 12hour hackathon build in Solve4Bharat hackath
 
 #### Notes:
 
-- I directly imported the Kaggle dataset to my Colab environment using the dataset API. You can also download the dataset locally from [here](https://www.kaggle.com/datamunge/sign-language-mnist) and then upload it to the environment you're working on. I personally found the previous method to be much faster.
-
-- I have used Tensorflow version 2.1.0 and that or a later version is what I recommend.
-
 - Training the model for 10 epochs \(approximately 11s per epoch) gave me a training accuracy of 99.5% and validation accuracy of 99.2%
 
 - To integrate the Tensorflow model in the Android app, I am coverting the Tensorflow model to a TFLite model in the notebook and then copying the .tflite file to the assets directory for the Android app.
