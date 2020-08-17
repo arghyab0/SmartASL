@@ -45,8 +45,6 @@ datagen = ImageDataGenerator(
         vertical_flip=False)  #randomly flip images
 datagen.fit(x_train)
 
-learning_rate_reduction = ReduceLROnPlateau(monitor='val_accuracy',patience=2,verbose=1,factor=0.5,min_lr=0.00001)
-
 #define CNN model
 model = Sequential()
 model.add(Conv2D(75,(3,3),strides=1,padding='same',activation='relu',input_shape=(28,28,1)))
@@ -66,7 +64,7 @@ model.add(Dense(24,activation='softmax'))
 model.compile(optimizer='adam',loss='categorical_crossentropy',metrics=['accuracy'])
 
 #train CNN model on training data
-history = model.fit(datagen.flow(x_train,y_train,batch_size=128),epochs=20,validation_data=(x_test,y_test),callbacks=[learning_rate_reduction])
+history = model.fit(datagen.flow(x_train,y_train,batch_size=128),epochs=20,validation_data=(x_test,y_test))
 
 print("Accuracy of the model is: ",model.evaluate(x_test,y_test)[1]*100,"%") #model final accuracy
 
